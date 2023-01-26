@@ -7,6 +7,13 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class RadioTest {
 
+    @Test
+    public void setRadio() {
+       Radio radio = new Radio(10);
+
+       Assertions.assertEquals(9, radio.getMaxStation());
+    }
+
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/setStation.csv")
     public void setStation(int currentStation, int expected) {
